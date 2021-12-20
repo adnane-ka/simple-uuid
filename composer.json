@@ -8,5 +8,10 @@
             "email": "dannykadri0@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Adnane\\SimpleUuid\\": "/src"
+        }
+    },
     "require": {}
 }
