@@ -1,0 +1,12 @@
+{
+    "name": "adnane/simple-uuid",
+    "description": "a simple laravel package to generate uuid instead of auto increment ids as primary keys",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "adnane-ka",
+            "email": "dannykadri0@gmail.com"
+        }
+    ],
+    "require": {}
+}
