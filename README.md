@@ -25,7 +25,7 @@ here are some reasons why you should use UUIDs:
 using `composer`:
 
 ```
-composer i adnane/simple-uuid
+composer require adnane/simple-uuid
 ```
 register the package's service provider in providers array in your `app.php`:
 
