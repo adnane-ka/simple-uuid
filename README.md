@@ -3,7 +3,7 @@
 a simple laravel package to generate uuid instead of auto incrementing ids as primary keys.
 
 ### what's even a uuid?
-UUID stands for Universally Unique IDentifier. as you may encounter the acronym of it GUID (which stands for Globally Unique IDentifier).
+UUID stands for Universally Unique IDentifier. as you may encounter the acronym of it GUID (Globally Unique IDentifier).
 
 It’s a 16 bytes Worldwide unique number! And absolulty, without using any kind of central authority or any external APIS. Actually, the way it is generated, following a standardized algorithm, ensures that every UUID is unique. and kinda impossible to generate the exact same UUID as another one somewhere else in the whole world.
 
@@ -12,7 +12,7 @@ and generally, it's something that looks like this:
 e0fbbbb1-446c-4a75-be2e-746f555722b2
 ```
 ### but, why do you even need to use it and not just the auto incrementing ids?
-well, it's not faire to just say that you always need to use the UUID thing istead of auto incrementing ids to index your objects in your database. but it's something cool to know the different uses of both of them and choose depending on your needs.
+well, it's not fair to just say that you always need to use the UUID thing istead of auto incrementing ids to index your objects in your database. but it's something cool to know the different uses of both of them and choose depending on your needs.
 
 here are some reasons why you should use UUIDs:
 * security: and definitely this is because uuids are impossible to guess, which is not like auto incrementing ids. 
@@ -77,6 +77,14 @@ php artisan migrate
 
 ```
 e0fbbbb1-446c-4a75-be2e-746f555722b2
+```
+
+6. use as foreign key 
+
+```php 
+# comments_table
+$table->uuid('user_id')->index();
+$table->foreign('user_id')->references('id')->on('users');
 ```
 
 ### contributing 
