@@ -2,8 +2,6 @@
 
 a simple laravel package to generate uuid instead of auto incrementing ids as primary keys.
 
-> Warning: This package is not installable via Composer 1.x, make sure you upgrade to Composer 2+ before trying to install it.
-
 ### what's even a uuid?
 UUID stands for Universally Unique IDentifier. as you may encounter the acronym of it GUID (which stands for Globally Unique IDentifier).
 
@@ -24,20 +22,14 @@ here are some reasons why you should use UUIDs:
 * local-first applications! : Let’s say I have a collaborative application. And I want to be able to work with that application, event when I’m offline. And that means creating new content that should be added to the common database. What I expect is for the application to let me create my new content, and merge it to the central shared database when I’m back online. And I expect my coworkers to be able to do the same. In this scenario, entries in the database can’t be indexed with an auto incrementing number. Because my coworkers and myself, while offline, would be creating entries with the same ID. And once back online, we would face numerous data merging issues. UUID in this case, is a marvelous solution!
 
 ### installation 
+> Warning: This package is not installable via Composer 1.x, make sure you upgrade to Composer 2+ before trying to install it.
+
 using `composer`:
 
 ```
 composer require adnane/simple-uuid
 ```
-register the package's service provider in providers array in your `app.php`:
-
-```php
-'providers' => [
-    ..
-    Adnane\SimpleUuid\SimpleUuidServiceProvider::class,
-```
-
-as you may need to define an alias for the package's trait , in your `app.php` in the aliases array as bellow:
+the package's service provider is auto loaded so no need to add it in the providers array in `app.php` .actually, you may need to define an alias for the package's trait , in your `app.php` in the aliases array as bellow:
 
 ```php
 'aliases' => [
@@ -92,4 +84,4 @@ everyone is welcome :)
 
 ### credit 
 
-[adnane-ka](https://github.com/adnane-ka/simple-uuid)
+[Adnane.Ka](https://github.com/adnane-ka/simple-uuid)
